@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Technical Phone Screen using the OpenAI Realtime API
 
-## Getting Started
+This project is a **Technical Phone Screen app** that leverages the **OpenAI Realtime API** to conduct simulated interviews with real-time audio transcription. The app processes input speech, sends it to the OpenAI API, and provides transcriptions, making it a useful tool for practicing technical interviews.
 
-First, run the development server:
+<img src="/readme/screenshot.png" width="800" />
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Features
+- Real-time audio transcription using the OpenAI Realtime API.
+- Simulates a technical phone interview with customizable candidate name and difficulty levels.
+- OpenAI Whisper model used for accurate transcription.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Demo
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+You can see the app [here](https://actamachina.com/technical-phone-screen). Since the OpenAI Realtime API costs are approximately **24c per minute**, you will need to supply your own API key.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Requirements
 
-## Learn More
+- Node.js
+- OpenAI API key (You can get one [here](https://platform.openai.com/account/api-keys))
 
-To learn more about Next.js, take a look at the following resources:
+## Installation
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. **Clone the repository**:
+    ```bash
+    git clone https://github.com/tlyleung/technical-phone-screen.git
+    cd technical-phone-screen
+    ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2. **Install dependencies**:
+    ```bash
+    npm install
+    ```
 
-## Deploy on Vercel
+3. **Run the development server**:
+    ```bash
+    npm run dev
+    ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4. **Open the app**:
+    Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Usage
+
+1. Enter your **OpenAI API Key** in the input field.
+2. Customize your interview settings, such as the **candidate name** and **difficulty level**.
+3. Start the interview by clicking the "Start" button.
+4. Open the browser console to see the real-time transcription.
+
+## Cost Notice
+
+Be aware that using the OpenAI Realtime API incurs costs at approximately **24c per minute**. You will need your own API key to use this app.
+
+## Contributing
+
+Contributions are welcome! Please feel free to open issues or submit pull requests.
+
+## License
+
+This project is licensed under the GNU General Public License v3.0 License. See the [LICENSE](LICENSE) file for more details.
