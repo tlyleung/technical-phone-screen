@@ -13,6 +13,7 @@ import { Heading } from '@/components/catalyst/heading';
 import { Input } from '@/components/catalyst/input';
 import {
   Navbar,
+  NavbarItem,
   NavbarSection,
   NavbarSpacer,
 } from '@/components/catalyst/navbar';
@@ -20,15 +21,23 @@ import { Select } from '@/components/catalyst/select';
 import {
   Sidebar,
   SidebarBody,
+  SidebarDivider,
+  SidebarFooter,
+  SidebarHeader,
   SidebarHeading,
+  SidebarItem,
+  SidebarLabel,
   SidebarSection,
   SidebarSpacer,
 } from '@/components/catalyst/sidebar';
 import { SidebarLayout } from '@/components/catalyst/sidebar-layout';
+import { Text } from '@/components/catalyst/text';
 import { Textarea } from '@/components/catalyst/textarea';
+import { ActaMachinaIcon, GitHubIcon } from '@/components/icons';
 import { WavRecorder, WavStreamPlayer } from '@/lib/wavtools/index.js';
 import { getInstructions } from '@/utils/conversation_config';
 import { PhoneIcon } from '@heroicons/react/16/solid';
+import { ArrowUturnLeftIcon } from '@heroicons/react/20/solid';
 import { RealtimeClient } from '@openai/realtime-api-beta';
 import { useEffect, useRef, useState } from 'react';
 import { useDebounce } from 'use-debounce';
@@ -263,12 +272,40 @@ export default function Page() {
       navbar={
         <Navbar>
           <NavbarSpacer />
-          <NavbarSection></NavbarSection>
+          <NavbarSection>
+            <NavbarItem href="/demos" aria-label="Back to Demos">
+              <ArrowUturnLeftIcon />
+            </NavbarItem>
+            <NavbarItem
+              href="https://github.com/tlyleung/technical-phone-screen"
+              aria-label="GitHub Repository"
+            >
+              <GitHubIcon />
+            </NavbarItem>
+          </NavbarSection>
         </Navbar>
       }
       sidebar={
         <Sidebar>
+          <SidebarHeader>
+            <SidebarSection>
+              <SidebarItem href="/" aria-label="Acta Machina">
+                <span className="inline-grid size-8 shrink-0 rounded-full bg-zinc-900 p-1.5 align-middle text-white outline outline-1 -outline-offset-1 outline-black/[--ring-opacity] [--avatar-radius:20%] [--ring-opacity:20%] *:col-start-1 *:row-start-1 *:rounded-full dark:bg-white dark:text-black dark:outline-white/[--ring-opacity]">
+                  <ActaMachinaIcon />
+                </span>
+                <SidebarLabel>Acta Machina</SidebarLabel>
+              </SidebarItem>
+            </SidebarSection>
+          </SidebarHeader>
           <SidebarBody>
+            <SidebarSection>
+              <SidebarHeading>Instructions</SidebarHeading>
+              <Text className="px-2">
+                You are a candidate for a technical phone screen with access to
+                a code editor.
+              </Text>
+            </SidebarSection>
+            <SidebarDivider />
             <SidebarSection>
               <SidebarHeading>Settings</SidebarHeading>
               <Fieldset className="px-2">
@@ -316,6 +353,21 @@ export default function Page() {
             </SidebarSection>
             <SidebarSpacer />
           </SidebarBody>
+          <SidebarFooter>
+            <SidebarSection>
+              <SidebarItem href="/demos" aria-label="Back to Demos">
+                <ArrowUturnLeftIcon />
+                <SidebarLabel>Back to Demos</SidebarLabel>
+              </SidebarItem>
+              <SidebarItem
+                href="https://github.com/tlyleung/technical-phone-screen"
+                aria-label="GitHub Repository"
+              >
+                <GitHubIcon />
+                <SidebarLabel>GitHub Repository</SidebarLabel>
+              </SidebarItem>
+            </SidebarSection>
+          </SidebarFooter>
         </Sidebar>
       }
     >

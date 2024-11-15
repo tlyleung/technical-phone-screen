@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    basePath: '/technical-phone-screen',
+    basePath: '/demos/technical-phone-screen',
     eslint: { dirs: ['app'] },
     output: 'export',
 };
