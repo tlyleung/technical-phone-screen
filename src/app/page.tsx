@@ -273,7 +273,10 @@ export default function Page() {
         <Navbar>
           <NavbarSpacer />
           <NavbarSection>
-            <NavbarItem href="/demos" aria-label="Back to Demos">
+            <NavbarItem
+              href="https://actamachina.com/demos"
+              aria-label="Back to Demos"
+            >
               <ArrowUturnLeftIcon />
             </NavbarItem>
             <NavbarItem
@@ -289,7 +292,10 @@ export default function Page() {
         <Sidebar>
           <SidebarHeader>
             <SidebarSection>
-              <SidebarItem href="/" aria-label="Acta Machina">
+              <SidebarItem
+                href="https://actamachina.com"
+                aria-label="Acta Machina"
+              >
                 <span className="inline-grid size-8 shrink-0 rounded-full bg-zinc-900 p-1.5 align-middle text-white outline outline-1 -outline-offset-1 outline-black/[--ring-opacity] [--avatar-radius:20%] [--ring-opacity:20%] *:col-start-1 *:row-start-1 *:rounded-full dark:bg-white dark:text-black dark:outline-white/[--ring-opacity]">
                   <ActaMachinaIcon />
                 </span>
@@ -355,7 +361,10 @@ export default function Page() {
           </SidebarBody>
           <SidebarFooter>
             <SidebarSection>
-              <SidebarItem href="/demos" aria-label="Back to Demos">
+              <SidebarItem
+                href="https://actamachina.com/demos"
+                aria-label="Back to Demos"
+              >
                 <ArrowUturnLeftIcon />
                 <SidebarLabel>Back to Demos</SidebarLabel>
               </SidebarItem>
