@@ -14,7 +14,7 @@
     "@openai/realtime-api-beta": "github:openai/openai-realtime-api-beta",
     "clsx": "^2.1.1",
     "framer-motion": "^11.5.6",
-    "next": "14.2.13",
+    "next": "14.2.23",
     "openai": "^4.63.0",
     "react": "^18",
     "react-dom": "^18",
